@@ -1,0 +1,417 @@
+/**********************
+NORMALIZE
+***********************/
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Montserrat')
+/**********************
+GLOBAL STYLING
+***********************/
+body{font-size: 14px;}
+p, a{font-family: 'Montserrat', sans-serif;}
+h1, h2, h3, h4, h5{font-family: 'Merriweather', serif;
+}
+.navbar-brand{padding: 0; width: 100px;}
+.navbar{padding: 15px 0;}
+
+/**********************
+carousel
+**********************/
+.promo-carousel-cell {
+  width: 100%;
+  height: 300px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: gallery-cell;
+}
+.promo-carousel-cell img{width: 100%;}
+.item{display: block;}
+.carousel-caption{color:#000; position:static;}
+.carousel-inner{overflow: hidden;}
+.carousel ol li.active{background: #f8941b; border: 2px solid #fe7802;}
+.carousel ol li{background: white; border: 2px solid grey;}
+.promoSection{border: 2px solid red;}
+
+.followUs h4{
+  display: inline-block;
+}
+
+.contactSocMed{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.socialImg{
+  margin-right: 15px;
+}
+
+.contactWrapper h2{color: #fe7802;}
+
+.messageInput button{background: #f8941b; padding: 10px 25px;}
+.galleryWrapper .btn-info{
+    border: none;
+    background: none;
+}
+
+.galleryWrapper .btn-info:hover{
+    border: 2px solid;
+}
+/**************************
+NAVIGATION 
+***************************/
+@media all and (max-width: 992px){
+
+
+    .navbar-header {
+        float: none;
+
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 24px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+
+   .navbar-toggle .icon-bar{
+        width: 40px;
+        height: 3px;
+        padding: 2px 0;
+        margin: 2px 0;
+    }
+
+    .navbar-inverse{
+        background-color: rgba(0,0,0,0.8);
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    blockquote{font-size: 0.75em;}
+}
+
+
+/***************************
+   MIN WIDTH 320PX
+***************************/
+
+@media all and (min-width: 320px) {
+
+
+
+
+.strideSection{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/*************************
+JUMBOTRON SECTION
+**************************/
+
+    .landingPage{
+        margin-left: 0;
+        margin-right: 0;
+        height: 100vh;
+
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+
+        -webkit-flex-align: center;
+        -moz-flex-align: center;
+        flex-align: center;
+
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        box-align: center;
+
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    /********************************
+    BACKGROUND 
+    ********************************/
+    
+    .background1, .background3 {
+        position: relative;
+        background: rgba(128,128,128,0.5);
+    }
+
+    .background1:after{
+        content: "";
+        position: absolute;
+        background-image: url(../images/bgBanner2Mobile.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        opacity: 0.7;
+    }
+
+     .background2{
+        background: #f8941b;
+        color: #fff;
+    }  
+
+    .background3{
+        color: #fff;
+    }
+    .background3:after{
+        content: "";
+        position: absolute;
+        background-image: url(../images/bgBannerMobile.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        opacity: 0.7;
+    }
+    
+    .contactWrapper{
+        position: relative;
+        background: rgba(0,0,0,0.5);
+    }
+    .contactWrapper:after{
+        content: "";
+        position: absolute;
+        background-image:url(../images/background1Mobile.png);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        opacity: 0.8;
+    }
+
+    .jumbotron h1{
+        margin-bottom: 0;
+        color: #fe7802;
+    }
+    .jumbotron h2,
+    .jumbotron h3,
+    .jumbotron h5{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+
+    .callToAction{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 90px;
+        margin: 0 auto;
+        color: #fff;
+    }
+
+    .callToAction img{
+        height: 25px;
+        width: 100px;
+        margin-top: 25px;
+    }
+
+   
+    .gymContent{
+        margin-bottom: 45px;
+    }
+    .schedule,
+    .personalTraining{
+        color: #fff;
+    }
+    .galleryNav{margin: 0 auto;}
+    .grid-item{width: 49%}
+
+    .form-group button{
+        background: #fe7802;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .form-group .col-xs-8{
+        padding-right: 0;
+    }
+
+    .form-group .col-xs-4{
+        padding-left: 0;
+    }
+    
+    .btn-info{padding: 0;}
+
+    carousel-caption blockquote{
+        height: 340px;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+
+
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        justify-content: center;
+        
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        flex-direction: column;
+    }
+
+
+    .footer-end ul li{
+        list-style: none;
+        display: inline-block;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .footer-end{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        background: black;color: #fff;
+    }
+
+    .footer-end ul{padding: 0;}
+    .footer-end .strideLocation p{display: inline-block;}
+
+    .footer-end h4{color: #f8741b;}   
+    .footer-end h4{letter-spacing: 0.125em;}
+    .footer-end p{line-height: 1.5em;font-size: 0.8em;}
+    .footerNavigate li a,.disclaimer h5 a{color: #37AEF7;}
+    .socialMedia img{width: 40px; height: auto;}
+    .socialMedia li{padding-top: 2%;padding-bottom:2%;}
+    .socialMedia li a{color: #fff;}
+    .socialMedia li a:hover{color: #37AEF7;}
+    .disclaimer h5{padding: 0;text-align: center; margin-top: 25px;}
+    img.lanny{display: none;} 
+    .modal-body img{margin: 0 auto;}
+
+    .location iframe{max-width: 250px;height: auto;}
+}
+
+
+/***************************
+   MIN WIDTH 768PX
+***************************/
+
+@media all and (min-width: 768px){
+    .location iframe{max-width: 650px;height: auto;}
+    .grid-item{width: 32%; margin: 2px;}
+    .background1:after{
+
+        background-image: url(../images/bgBanner2.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+
+    }
+
+    .background3:after{
+
+        background-image: url(../images/bgBanner.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+
+    }
+
+    .contactWrapper:after{
+        background-image:url(../images/background1.png);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: bottom center;
+   }
+
+}
+ 
+
+
+/***************************
+   MIN WIDTH 992PX
+***************************/
+
+
+@media all and (min-width: 992px){
+
+    .jumbotron h1{font-size: 10em;}
+    .jumbotron h2{font-size: 5em;}
+    .jumbotron h3{font-size: 3em;}
+    .jumbotron h5{font-size: 1.5em;}
+    .callToAction img{width: 150px; height: 50px;}
+    .callToAction h5{font-size: 1em;}
+    .callToAction{bottom: 25px;}
+
+    .strideMessage h4{font-size: 1.57em;}
+    .strideMessage p{font-size: 1em;}
+    .gymHeader h2,.personalTraining h2{letter-spacing: 0.125em;}
+    .gymHeader h3,.personalTrainign h3{margin: 0;}
+    .gymContent p,.personalTraining p{margin-top: 25px;line-height: 1.5em;}
+    .grid-item{width: 24%; margin: 5px;}
+    .facilitiesImg img{margin-top: 100px;}
+    .footerNavigate li{display: inline-block;text-align: left;line-height: 1.5em; padding: 0;}
+    .strideLocation>*{display: inline-block;}    
+    .socialMedia img{width: 35px; height: auto;display}
+    .socialMedia ul li{list-style:none;display:inline-block; padding: 10px;}
+    .strideLocation p{font-size: 0.75em;}
+    .strideLocation{text-align: center;}
+    img.lanny{display:inline-block;}
+    .location iframe{max-width: 900px;height: auto;}
+
+}
+
+@media all and (min-width: 1200px){
+    .facilitiesImg img{margin-top: 50px;}
+}
