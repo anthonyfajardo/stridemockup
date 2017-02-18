@@ -17,11 +17,16 @@ $(function(){
 // 		});
 // 	});
 
-		// init Isotope
+	// init Isotope
 	var $grid = $('.grid').isotope({
 	  // options
 	  itemSelector: '.grid-item',
 	  stagger:30
+	});
+
+
+	$grid.imagesLoaded().progress( function() {
+		$grid.isotope('layout');
 	});
 	// filter items on button click
 	$('.filter-button-group').on( 'click', '.button', function() {
